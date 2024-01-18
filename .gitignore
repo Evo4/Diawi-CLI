@@ -24,6 +24,7 @@ Index/
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## App packaging
+./build/*.ipa
 build/*.ipa
 *.ipa
 *.dSYM.zip
