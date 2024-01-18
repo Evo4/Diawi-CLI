@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# exit when any command fails
+set -e
+
+folderName=$(dirname $0)
+scriptName="uploadToDiawi.sh"
+
+cd $folderName
+bash "$folderName/$scriptName"
