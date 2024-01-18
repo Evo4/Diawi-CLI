@@ -1,6 +1,6 @@
 # Xcode
 .DS_Store
-*/build/*
+# */build/*
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -19,7 +19,7 @@ UserInterfaceState.xcuserstate
 Pods/
 Podfile.lock
 *.xccheckout
-Build/
+# Build/
 Index/
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
