@@ -158,7 +158,13 @@ def main(args):
 
     validate_file(args)
     tmp_file_name = create_tmp_file_name(args)
-    token = get_token()
+
+    if args.token is None:
+        token = get_token()
+    else:
+        token = [args.token]
+        log("found token : {}".format(token))
+
     file_upload(args, tmp_file_name, token)
     job_id = file_post(args, tmp_file_name, token)
     get_job_status(token, job_id)
@@ -176,6 +182,7 @@ if __name__ == '__main__':
     parser.add_argument("-u", "--udid",     help="Allow testers to find by UDID on Daiwi", action="store_true")
     parser.add_argument("-w", "--wall",     help="List icon on Diawi 'Wall of Apps'", action="store_true")
     parser.add_argument("-d", "--debug",    help="Set to enable debug", action="store_true")
+    parser.add_argument("-t", "--token",    help="Set diawi account token")
     args = parser.parse_args()
 
     main(args)
